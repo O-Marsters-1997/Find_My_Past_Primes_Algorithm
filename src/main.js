@@ -41,4 +41,17 @@ const getUserInput = () => {
 
 console.log(getUserInput());
 
+function writeTable(){
+    document.write("<table id='table'>");
+}
+
+function fillTable(){
+    const btn = document.getElementById('btn')
+    console.log(btn)
+    const table = document.getElementById('table');
+    for(i of getPrimes()) {
+        table.appendChild(document.createElement('tr'))
+    }
+}
+
 module.exports = { getPrimes, getMultiples };

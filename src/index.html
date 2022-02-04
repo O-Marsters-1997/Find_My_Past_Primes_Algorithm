@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primes Display</title>
 </head>
+
 <body>
-    
+    <div class="table-header">
+        <h4 class="table-header-title">Prime number multiplication table</h4>
+        <div class="numberfield"><input type="number" defaultValue="0"></div>
+        <button id="btn" onClick="fillTable()">Get multiples</button>
+    </div>
+    <div class="table-container" onload="writeTable()">
+
+    </div>
+
 </body>
+<script src="./main.js"></script>
+
 </html>
