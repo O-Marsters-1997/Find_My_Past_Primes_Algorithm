@@ -42,15 +42,23 @@ const getUserInput = () => {
 console.log(getUserInput());
 
 function writeTable(){
-    document.write("<table id='table'>");
+    console.log("hello")
+    const cont = document.getElementsByClassName("table-container")[0];
+    cont.appendChild(document.createElement("table"))
+    document.querySelector("table").classList.add('table')
 }
 
 function fillTable(){
-    const btn = document.getElementById('btn')
-    console.log(btn)
-    const table = document.getElementById('table');
-    for(i of getPrimes()) {
-        table.appendChild(document.createElement('tr'))
+    const input = document.getElementById("input-type");
+    const table = document.getElementsByClassName('table')[0];
+    console.log(table)
+    console.log(typeof(parseInt(input.value)));
+    for (i of getPrimes(parseInt(input.value))) {
+      console.log(i);
+      let row = document.createElement("tr");
+      row.innerHTML= `<td> Hello world </td>`
+      table.appendChild(row);
+      console.log(row)
     }
 }
 

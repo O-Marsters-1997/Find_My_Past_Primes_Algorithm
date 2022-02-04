@@ -8,13 +8,15 @@
     <title>Primes Display</title>
 </head>
 
-<body>
+<body onload="writeTable()">
     <div class="table-header">
         <h4 class="table-header-title">Prime number multiplication table</h4>
-        <div class="numberfield"><input type="number" defaultValue="0"></div>
+        <div class="numberfield">
+            <input type="number" defaultValue="0" id="input-type">
+        </div>
         <button id="btn" onClick="fillTable()">Get multiples</button>
     </div>
-    <div class="table-container" onload="writeTable()">
+    <div class="table-container">
 
     </div>
 
