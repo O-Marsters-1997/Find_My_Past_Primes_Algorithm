@@ -30,4 +30,13 @@ describe('getMutliples', ()=> {
       const primes = getPrimes(5);
       expect(getMultiples(primes).at(-1)).toBe(121);
     });
+
+    it("should be able to replicate this result for large n input numbers", ()=> {
+      // This returns an array of the first 5000 prime numbers
+      const primes = getPrimes(5000);
+      // The 5000th prime number is 48611
+      finalPrime = getPrimes(5000).at(-1);
+      //   Therefore the final integer in the multiplication table will be 48611^2 (i.e 2363029321)
+      expect(getMultiples(primes).at(-1)).toBe(finalPrime ** 2);
+    })
 })

@@ -38,7 +38,7 @@ const getMultiples = (numArray) => {
   }
   return multiples;
 };
-console.log(getMultiples([2, 3, 5, 7]));
+console.log(getPrimes(5000).at(-1))
 
 
 
