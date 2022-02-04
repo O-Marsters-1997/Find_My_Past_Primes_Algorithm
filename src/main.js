@@ -28,13 +28,15 @@ function getPrimes(num) {
   return primes;
 }
 
-getMutliples = (numArray)=> {
-    let multiples = []
-    for (int of numArray) {
-        multiples.push(int**2)
-    }
-return multiples
-}
-console.log(getMutliples(getPrimes(5)));
+const getMultiples = (numArray) => {
+  let multiples = [];
+  for (int of numArray) {
+    multiples.push(int ** 2);
+  }
+  return multiples;
+};
+console.log(getMultiples([2, 4, 6]).length);
 
-module.exports = getPrimes
+
+
+module.exports = {getPrimes, getMultiples}

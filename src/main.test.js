@@ -1,4 +1,5 @@
-const getPrimes = require('./main')
+const { getPrimes, getMultiples } = require("./main");
+
 
 describe('getPrimes', ()=> {
     it('should return an array of equal lenth to the number that is inputted', ()=> {
@@ -10,8 +11,10 @@ describe('getPrimes', ()=> {
     })
 })
 
+// Test to make sure that the length of multiples returned is the length of the primes array to the exponent of 2.
 describe('getMutliples', ()=> {
-    it('should return aa array of length n^2', ()=> {
-        
+    it('should return an array of length n^2', ()=> {
+        const  primes = getPrimes(5)
+        expect(getMultiples(primes).length).toBe(primes.length**2);
     })
 })
