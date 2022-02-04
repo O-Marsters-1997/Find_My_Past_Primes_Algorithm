@@ -1,0 +1,2 @@
+const getPrimes = require('./main')
+
