@@ -30,12 +30,15 @@ function getPrimes(num) {
 
 const getMultiples = (numArray) => {
   let multiples = [];
-  for (int of numArray) {
-    multiples.push(int ** 2);
+  for (i of numArray) {
+   for (j of numArray) {
+       let k = i * j;
+       multiples.push(k)
+   }
   }
   return multiples;
 };
-console.log(getMultiples([2, 4, 6]).length);
+console.log(getMultiples([2, 3, 5, 7]));
 
 
 
