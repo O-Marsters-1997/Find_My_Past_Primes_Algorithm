@@ -28,6 +28,13 @@ function getPrimes(num) {
   return primes;
 }
 
-console.log(getPrimes(5));
+getMutliples = (numArray)=> {
+    let multiples = []
+    for (int of numArray) {
+        multiples.push(int**2)
+    }
+return multiples
+}
+console.log(getMutliples(getPrimes(5)));
 
 module.exports = getPrimes
