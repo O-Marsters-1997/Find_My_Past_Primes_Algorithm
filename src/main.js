@@ -42,7 +42,6 @@ const getUserInput = () => {
 console.log(getUserInput());
 
 function writeTable(){
-    console.log("hello")
     const cont = document.getElementsByClassName("table-container")[0];
     cont.appendChild(document.createElement("table"))
     document.querySelector("table").classList.add('table')
@@ -53,6 +52,10 @@ function fillTable(){
     // Defining variables 
     const input = document.getElementById("input-type");
     const table = document.getElementsByClassName('table')[0];
+
+    // Clearing innerHtml of table before repeating the process agin
+    table.innerHTML = '';
+
     const row1 = document.createElement("tr");
     row1.innerHTML = `<td>X</td>`;
 
