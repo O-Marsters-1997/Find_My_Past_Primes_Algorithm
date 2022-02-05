@@ -1,0 +1,109 @@
+/* General styling for document in general */
+
+:root {
+  /* Colour palette */
+  --background-primary: rgb(238, 238, 238);
+  --table-alternate: rgb(240, 240, 240);
+  --accent: rgb(106, 53, 175);
+  --text-body: rgb(53, 53, 53);
+  --text-headings: rgb(0, 0, 0);
+  --text-secondary: rgb(238, 238, 238);
+}
+
+/* resets */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-body);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Styling for document header */
+
+.table-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6.5rem;
+}
+
+.table-header-title {
+  text-transform: capitalize;
+  font-size: 2.35rem;
+  color: var(--text-headings);
+}
+
+.table-header-instructions {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 1.25rem;
+  padding: 1.25rem 0;
+}
+
+/* Styllings for input section */
+
+.numberfield {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.numberfield * {
+  font-size: 1.2rem;
+  padding: 0.25rem;
+}
+
+.numberfield input {
+  width: 4em;
+  margin-right: 0.2em;
+  border-radius: 10px;
+  border: 01px solid var(--text-body);
+}
+
+.numberfield button {
+  color: var(--text-secondary);
+  width: fit-content;
+  border-radius: 10px;
+  margin-top: 0.25rem;
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
+/* Stylings for table */
+
+.table-container {
+    margin-top: 3em;
+}
+
+.table-container .table {
+  border-collapse: collapse;
+  background-color: white;
+  width: fit-content;
+  margin: 2em auto;
+  border-radius: 10px;
+}
+
+.table tr:nth-child(2n) {
+  background-color: var(--table-alternate);
+}
+
+.table th,
+.table td {
+  padding: 0.7em;
+}
+
+.table th {
+  color: var(--text-headings);
+}
+
+.table td:hover {
+    border-radius: 10px;
+    background-color: var(--accent);
+    color: var(--text-secondary);
+}
