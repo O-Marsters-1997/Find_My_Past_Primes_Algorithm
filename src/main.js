@@ -54,7 +54,7 @@ const getUserInput = () => {
   });
 };
 
-// console.log(getUserInput());
+console.log(getUserInput());
 
 // This function initialises an empty table within the table container
 function writeTable() {
