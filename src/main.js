@@ -51,14 +51,17 @@ function writeTable(){
 function fillTable(){
     const input = document.getElementById("input-type");
     const table = document.getElementsByClassName('table')[0];
-    console.log(table)
-    console.log(typeof(parseInt(input.value)));
+    const row1 = document.createElement("tr");
+    row1.innerHTML = `<td>X</td>`
+    table.appendChild(row1);
     for (i of getPrimes(parseInt(input.value))) {
-      console.log(i);
       let row = document.createElement("tr");
-      row.innerHTML= `<td> Hello world </td>`
+      row.innerHTML= `<td> ${i} </td>`
+      
+    //   for(j of getMultiples(getPrimes(parseInt(input.value)))) {
+    //       let 
+    //   }
       table.appendChild(row);
-      console.log(row)
     }
 }
 
