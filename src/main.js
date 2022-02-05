@@ -41,40 +41,51 @@ const getUserInput = () => {
 
 console.log(getUserInput());
 
-function writeTable(){
-    const cont = document.getElementsByClassName("table-container")[0];
-    cont.appendChild(document.createElement("table"))
-    document.querySelector("table").classList.add('table')
+function writeTable() {
+  const cont = document.getElementsByClassName("table-container")[0];
+  cont.appendChild(document.createElement("table"));
+  document.querySelector("table").classList.add("table");
 }
 
-function fillTable(){
+function fillTable() {
+  // Defining variables
+  const input = document.getElementById("input-type");
+  const table = document.getElementsByClassName("table")[0];
+  const primes = getPrimes(parseInt(input.value));
 
-    // Defining variables 
-    const input = document.getElementById("input-type");
-    const table = document.getElementsByClassName('table')[0];
-    const primes = getPrimes(parseInt(input.value))
+  // Clearing innerHtml of table before repeating the process agin
+  table.innerHTML = "";
 
-    // Clearing innerHtml of table before repeating the process agin
-    table.innerHTML = '';
+  // Adding all of the multiples to an array
+  let multiples = [];
+  for (j of getMultiples(primes)) {
+    multiples.push(j);
+  }
 
-    const row1 = document.createElement("tr");
-    row1.innerHTML = `<td>X</td>`;
+  const row1 = document.createElement("tr");
+  row1.innerHTML = `<td>X</td>`;
 
-    for (let i = 0; i < primes.length; i++) {
-      let col = document.createElement("td");
-      col.innerHTML = primes[i];
-      row1.appendChild(col);
-    }
-      table.appendChild(row1);
-    for (i of primes) {
-      let row = document.createElement("tr");
-      row.innerHTML = `<td> ${i} </td>`;
+  for (let i = 0; i < primes.length; i++) {
+    let col = document.createElement("td");
+    col.innerHTML = primes[i];
+    row1.appendChild(col);
+  }
+  table.appendChild(row1);
+  for (i of primes) {
+    let row = document.createElement("tr");
+    row.innerHTML = `<td> ${i} </td>`;
 
-      //   for(j of getMultiples(getPrimes(parseInt(input.value)))) {
-      //       let
-      //   }
-      table.appendChild(row);
-    }
+    multiples.forEach((num) => {
+      while (row.children.length <= primes.length) {
+        row.innerHTML += `<td>${num}</td>`;
+
+        break;
+      }
+      
+    });
+    multiples.splice(0, primes.length);
+    table.appendChild(row);
+  }
 }
 
 module.exports = { getPrimes, getMultiples };
