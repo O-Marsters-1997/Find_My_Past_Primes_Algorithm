@@ -63,17 +63,17 @@ function fillTable() {
   }
 
   const row1 = document.createElement("tr");
-  row1.innerHTML = `<td>X</td>`;
+  row1.innerHTML = `<th>X</th>`;
 
   for (let i = 0; i < primes.length; i++) {
-    let col = document.createElement("td");
+    let col = document.createElement("th");
     col.innerHTML = primes[i];
     row1.appendChild(col);
   }
   table.appendChild(row1);
   for (i of primes) {
     let row = document.createElement("tr");
-    row.innerHTML = `<td> ${i} </td>`;
+    row.innerHTML = `<th> ${i} </th>`;
 
     multiples.forEach((num) => {
       while (row.children.length <= primes.length) {
