@@ -49,11 +49,19 @@ function writeTable(){
 }
 
 function fillTable(){
+
+    // Defining variables 
     const input = document.getElementById("input-type");
     const table = document.getElementsByClassName('table')[0];
     const row1 = document.createElement("tr");
-    row1.innerHTML = `<td>X</td>`
-    table.appendChild(row1);
+    row1.innerHTML = `<td>X</td>`;
+
+    for (let i = 0; i < getPrimes(parseInt(input.value)).length; i++) {
+        let col = document.createElement("td")
+        col.innerHTML = getPrimes(parseInt(input.value))[i];
+        row1.appendChild(col)
+    }
+      table.appendChild(row1);
     for (i of getPrimes(parseInt(input.value))) {
       let row = document.createElement("tr");
       row.innerHTML= `<td> ${i} </td>`
